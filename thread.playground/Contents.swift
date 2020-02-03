@@ -115,3 +115,81 @@ timer.setEventHandler {
     }
 }
 timer.resume()
+
+
+func synchronized(_ obj: AnyObject, closure:()->()) {
+    objc_sync_enter(obj)
+    closure()
+    objc_sync_exit(obj)
+}
+
+
+/*
+var array = Array(0...1000)
+let lock = NSLock()
+func getLastItem() -> Int? {
+    var temp: Int? = nil
+    lock.lock()
+    if array.count>0 {
+        temp = array[array.count - 1]
+    }
+    lock.unlock()
+    return temp
+}
+
+func removeLastItem() {
+    lock.lock()
+    array.removeLast()
+    lock.unlock()
+}
+
+let queue1 = DispatchQueue(label: "Queue1", qos: DispatchQoS.default, attributes: DispatchQueue.Attributes.concurrent, autoreleaseFrequency: DispatchQueue.AutoreleaseFrequency.inherit, target: nil)
+let queue2 = DispatchQueue(label: "Queue2", qos: DispatchQoS.default, attributes: DispatchQueue.Attributes.concurrent, autoreleaseFrequency: DispatchQueue.AutoreleaseFrequency.inherit, target: nil)
+queue1.async {
+    for _ in 0..<1000 {
+        removeLastItem()
+    }
+}
+queue2.async {
+    for _ in 0..<1000 {
+        if let item = getLastItem() {
+            print("item = \(item)")
+        }
+    }
+}
+ */
+
+
+var array = Array(0...1000)
+
+func getLastItem() -> Int? {
+    var temp: Int? = nil
+    queue.sync {
+        if array.count>0 {
+            temp = array[array.count - 1]
+        }
+    }
+    return temp
+}
+
+func removeLastItem() {
+    let workItem = DispatchWorkItem(qos: DispatchQoS.default, flags: DispatchWorkItemFlags.barrier) {
+        array.removeLast()
+    }
+    queue.async(execute: workItem)
+}
+
+let queue1 = DispatchQueue(label: "Queue1", qos: DispatchQoS.default, attributes: DispatchQueue.Attributes.concurrent, autoreleaseFrequency: DispatchQueue.AutoreleaseFrequency.inherit, target: nil)
+let queue2 = DispatchQueue(label: "Queue2", qos: DispatchQoS.default, attributes: DispatchQueue.Attributes.concurrent, autoreleaseFrequency: DispatchQueue.AutoreleaseFrequency.inherit, target: nil)
+queue1.async {
+    for _ in 0..<1000 {
+        removeLastItem()
+    }
+}
+queue2.async {
+    for _ in 0..<1000 {
+        if let item = getLastItem() {
+            print("item = \(item)")
+        }
+    }
+}
