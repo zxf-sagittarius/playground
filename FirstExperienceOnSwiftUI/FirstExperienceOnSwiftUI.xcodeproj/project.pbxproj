@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0CAEE01623E94D8600AA56B5 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEE01523E94D8600AA56B5 /* CircleImage.swift */; };
 		0CAEE01823E9507500AA56B5 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEE01723E9507500AA56B5 /* MapView.swift */; };
+		0CB354FC23FA707D00A57AE1 /* PropertyWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB354FB23FA707D00A57AE1 /* PropertyWrapperView.swift */; };
 		0CB82C2723E84B0C009E422E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB82C2623E84B0C009E422E /* AppDelegate.swift */; };
 		0CB82C2923E84B0C009E422E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB82C2823E84B0C009E422E /* SceneDelegate.swift */; };
 		0CB82C2B23E84B0C009E422E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB82C2A23E84B0C009E422E /* ContentView.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		0CAEE01523E94D8600AA56B5 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		0CAEE01723E9507500AA56B5 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		0CB354FB23FA707D00A57AE1 /* PropertyWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrapperView.swift; sourceTree = "<group>"; };
 		0CB82C2323E84B0C009E422E /* FirstExperienceOnSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstExperienceOnSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB82C2623E84B0C009E422E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CB82C2823E84B0C009E422E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				0CB82C2A23E84B0C009E422E /* ContentView.swift */,
 				0CAEE01523E94D8600AA56B5 /* CircleImage.swift */,
 				0CAEE01723E9507500AA56B5 /* MapView.swift */,
+				0CB354FB23FA707D00A57AE1 /* PropertyWrapperView.swift */,
 				0CB82C2C23E84B0D009E422E /* Assets.xcassets */,
 				0CB82C3123E84B0D009E422E /* LaunchScreen.storyboard */,
 				0CB82C3423E84B0D009E422E /* Info.plist */,
@@ -155,6 +158,7 @@
 				0CB82C2723E84B0C009E422E /* AppDelegate.swift in Sources */,
 				0CAEE01623E94D8600AA56B5 /* CircleImage.swift in Sources */,
 				0CAEE01823E9507500AA56B5 /* MapView.swift in Sources */,
+				0CB354FC23FA707D00A57AE1 /* PropertyWrapperView.swift in Sources */,
 				0CB82C2923E84B0C009E422E /* SceneDelegate.swift in Sources */,
 				0CB82C2B23E84B0C009E422E /* ContentView.swift in Sources */,
 			);
