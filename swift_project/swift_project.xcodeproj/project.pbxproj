@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C5A53052403A1AA0025D83B /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A53042403A1AA0025D83B /* OCViewController.m */; };
+		0C5A53072403A6810025D83B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A53062403A6810025D83B /* Person.swift */; };
+		0C5A532D2403AFEE0025D83B /* Programmer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A532C2403AFEE0025D83B /* Programmer.m */; };
 		0CB3550A23FA8D4100A57AE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB3550923FA8D4100A57AE1 /* AppDelegate.swift */; };
 		0CB3550C23FA8D4100A57AE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB3550B23FA8D4100A57AE1 /* SceneDelegate.swift */; };
 		0CB3550E23FA8D4100A57AE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB3550D23FA8D4100A57AE1 /* ViewController.swift */; };
@@ -45,6 +48,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C5A53022403A1AA0025D83B /* swift_project-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift_project-Bridging-Header.h"; sourceTree = "<group>"; };
+		0C5A53032403A1AA0025D83B /* OCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
+		0C5A53042403A1AA0025D83B /* OCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
+		0C5A53062403A6810025D83B /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		0C5A532B2403AFEE0025D83B /* Programmer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Programmer.h; sourceTree = "<group>"; };
+		0C5A532C2403AFEE0025D83B /* Programmer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Programmer.m; sourceTree = "<group>"; };
 		0CB3550623FA8D4100A57AE1 /* swift_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swift_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB3550923FA8D4100A57AE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CB3550B23FA8D4100A57AE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,10 +112,16 @@
 				0CB3550923FA8D4100A57AE1 /* AppDelegate.swift */,
 				0CB3550B23FA8D4100A57AE1 /* SceneDelegate.swift */,
 				0CB3550D23FA8D4100A57AE1 /* ViewController.swift */,
+				0C5A53032403A1AA0025D83B /* OCViewController.h */,
+				0C5A53042403A1AA0025D83B /* OCViewController.m */,
+				0C5A53062403A6810025D83B /* Person.swift */,
+				0C5A532B2403AFEE0025D83B /* Programmer.h */,
+				0C5A532C2403AFEE0025D83B /* Programmer.m */,
 				0CB3550F23FA8D4100A57AE1 /* Main.storyboard */,
 				0CB3551223FA8D4500A57AE1 /* Assets.xcassets */,
 				0CB3551423FA8D4500A57AE1 /* LaunchScreen.storyboard */,
 				0CB3551723FA8D4500A57AE1 /* Info.plist */,
+				0C5A53022403A1AA0025D83B /* swift_project-Bridging-Header.h */,
 			);
 			path = swift_project;
 			sourceTree = "<group>";
@@ -185,6 +200,7 @@
 				TargetAttributes = {
 					0CB3550523FA8D4100A57AE1 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					0CB3552123FA8EAB00A57AE1 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -236,8 +252,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C5A53072403A6810025D83B /* Person.swift in Sources */,
 				0CB3550E23FA8D4100A57AE1 /* ViewController.swift in Sources */,
 				0CB3550A23FA8D4100A57AE1 /* AppDelegate.swift in Sources */,
+				0C5A532D2403AFEE0025D83B /* Programmer.m in Sources */,
+				0C5A53052403A1AA0025D83B /* OCViewController.m in Sources */,
 				0CB3550C23FA8D4100A57AE1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +419,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CQVGB7E6CK;
 				INFOPLIST_FILE = swift_project/Info.plist;
@@ -409,6 +429,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xxx.swift-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "swift_project/swift_project-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -419,6 +441,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CQVGB7E6CK;
 				INFOPLIST_FILE = swift_project/Info.plist;
@@ -428,6 +451,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xxx.swift-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "swift_project/swift_project-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

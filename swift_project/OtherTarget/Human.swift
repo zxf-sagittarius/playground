@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Human {
+public class Human {
     var name: String
     private var age: Int
     
