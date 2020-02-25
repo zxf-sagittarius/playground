@@ -1,0 +1,5 @@
+github "Alamofire/Alamofire" "5.0.0-rc.3"
+github "SnapKit/SnapKit" "5.0.1"
+github "SwiftyJSON/SwiftyJSON" "4.3.0"
+github "nixzhu/MonkeyKing" "1.16.0"
+github "onevcat/Kingfisher" "5.13.1"

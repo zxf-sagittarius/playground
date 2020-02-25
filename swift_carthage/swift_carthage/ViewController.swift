@@ -7,12 +7,20 @@
 //
 
 import UIKit
-
+import SnapKit
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let v = UIView()
+        v.backgroundColor = .blue
+        view.addSubview(v)
+        
+        v.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview().inset(20)
+        }
+        
     }
 
 
