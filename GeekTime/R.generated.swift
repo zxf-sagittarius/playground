@@ -218,10 +218,16 @@ struct _R: Rswift.Validatable {
       
       let bundle = R.hostingBundle
       let name = "Main"
+      let tab = StoryboardViewControllerResource<ViewController>(identifier: "Tab")
+      
+      func tab(_: Void = ()) -> ViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: tab)
+      }
       
       static func validate() throws {
         if #available(iOS 11.0, *) {
         }
+        if _R.storyboard.main().tab() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'tab' could not be loaded from storyboard 'Main' as 'ViewController'.") }
       }
       
       fileprivate init() {}

@@ -11,8 +11,14 @@ import Kingfisher
 
 class HomeViewController: BaseViewController, BannerViewDelegate,BannerViewDataSource, CommonListDelegate {
     
+    
     func didSelectItem<Item>(_ item: Item) {
-        
+        if let product = item as? Product {
+            let detailVC = DetailViewController()
+            detailVC.product = product
+            detailVC.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
     }
     
     func didSelectBanner(_ bannerView: BannerView, index: Int) {
